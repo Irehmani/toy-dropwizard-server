@@ -1,6 +1,7 @@
 # Get the Gradle image so we can build JAR file first
 FROM gradle:7.0.2-jdk11 AS build
 
+
 COPY --chown=gradle:gradle . /home/gradle/src
 WORKDIR /home/gradle/src
 RUN gradle shadowJar
